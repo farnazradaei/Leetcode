@@ -12,4 +12,4 @@ class Solution(object):
             digits[i] +=1
         else:
             digits.insert(0, 1)
-    
+        return digits
