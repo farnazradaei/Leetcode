@@ -3,13 +3,15 @@ class Solution(object):
         moshtrk = {}
         aaza = []
         for num in nums1 : 
-            moshtrk [num] = nums1 
-        for num in nums2 : 
             if num in moshtrk:
-                if num not in aaza:
-                    aaza.append(num)
-                    
-            
+                 moshtrk[num] += 1
+            else : 
+                 moshtrk[num] = 1 
+        for num in nums2 : 
+            if num in moshtrk and moshtrk[num] > 0 :
+                aaza.append(num)
+                moshtrk[num] -= 1
+
         return aaza
 
                    
